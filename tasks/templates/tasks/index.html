@@ -1,0 +1,12 @@
+{% extends "tasks/base.html" %} {% load static %}{% block title %} Tasks
+{% endblock%} {% block content%}
+<div class="container">
+  <h1>Tasks</h1>
+  <ul>
+    {% for task in tasks %}
+    <li>{{ task.title }} | Task ID# {{ task.id }} </li>
+    <ul>{{ task.description }} | Task Completed? {{ task.completed }}</ul>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %} {% block jsfiles %} {% endblock jsfiles %}
